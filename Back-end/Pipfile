@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 requests = "*"
 django = "*"
+python-decouple = "*"
+cloudinary = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
