@@ -1,0 +1,18 @@
+body{
+    height: 100%;
+    background-color:#111F3C;
+}
+.login-details{
+    background-color: white;
+    padding: 40px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    border-radius: 5%;
+}
+.btn-orange{
+    background-color: #FB6F36;
+    color: #ffff;
+}
+.h-font-semibold{
+    font-family: 'Montserrat', sans-serif;
+}
