@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "Tracker"
+  "cli": {
+    "analytics": false
+  }
 }
