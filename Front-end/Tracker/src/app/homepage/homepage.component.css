@@ -129,7 +129,7 @@
     display: flex;
     width: 100;
     background-color: #e1e1e1;
-    height: 22vw;
+    height: 25vw;
     justify-content: space-around;
     margin-bottom: 3vw;
 }
@@ -151,3 +151,38 @@
     margin-top: 1vw;
     margin-bottom: 1vw;
 }
+/* ...............media queries............. */
+@media screen and (max-width: 450px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        width: 100;
+        background-color: #e1e1e1;
+        height: 140vw;
+        margin-bottom: 22vw;
+      
+    }
+    .card{
+        width: 45%;
+        height: 37vw;
+        text-align: center;
+        background-color: white;
+        padding-top: 2vw;
+        padding: 1vw;
+        margin-top: 1vw;
+        margin-left: 25vw;
+    }
+    .card h5{
+        font-size: 2.3vw;
+        padding-bottom: 0.5vw;   
+    }
+    .card .iconify{
+        font-size: 5vw;
+        margin-top: 2vw;
+        margin-bottom: 0.5vw;
+    }
+    .card p{
+        font-size: 1.9vw;
+    }
+}
+
