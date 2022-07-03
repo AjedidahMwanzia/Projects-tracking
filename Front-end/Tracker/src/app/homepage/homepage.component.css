@@ -1,0 +1,188 @@
+
+/* .....................navbar.................................... */
+.logo img{
+    width: 12vw;
+    margin-left: -10vw;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+.block a{
+    text-decoration: none;
+    color: black;
+    padding: 2vw;
+}
+.block{
+    margin-top: 1vw;
+    font-size: 1.2vw;
+}
+/* ...............................media queries........................ */
+@media screen and (max-width: 450px) {
+    .logo img{
+        width: 15vw;
+        margin-left: -10vw;
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .block a{
+        text-decoration: none;
+        color: black;
+        padding: 2vw;
+    
+    }
+    .block{
+        margin-top: 1vw;
+        font-size: 2.3vw;
+    }
+}
+/* ......................background image section................ */
+.container{
+    background-image: linear-gradient(
+        90deg,
+        rgba(17,31,60,0.4),
+
+        rgba(17,31,60,0.3)
+    ),
+    url("../../assets/back2.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:42vw ;
+    width: 100%;
+}
+.container{
+    color: white;
+    padding-top: 7vw;
+    padding-left: 7vw;
+  
+}
+.container h1{
+    padding-bottom: 3vw;
+    font-weight: 700;
+    line-height: 0.4vw;
+}
+.container p {
+    margin-bottom: 2vw;
+    font-size: 1.2vw;
+    line-height:2.3vw ;
+}
+.title a{
+    text-decoration: none;
+    color: white;
+    background-color: #fa521c;
+    padding: 0.7vw;
+    border-radius: 0.5vw;
+    font-weight: 500;
+}
+/* ...................mediaqueries........................... */
+@media screen and (max-width: 450px) {
+    .container{
+        background-image: linear-gradient(
+            90deg,
+            rgba(17,31,60,0.4),
+    
+            rgba(17,31,60,0.3)
+        ),
+        url("../../assets/back2.jpg");
+    
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:42vw ;
+        width: 100%;
+    }
+    .container{
+        color: white;
+        padding-top: 7vw;
+        padding-left: 7vw;
+      
+    }
+    .container h1{
+        padding-bottom: 3vw;
+        font-weight: 700;
+        line-height: 0.4vw;
+        font-size:2.2vw ;
+    }
+    .container p {
+        margin-bottom: 2vw;
+        font-size: 1.5vw;
+        line-height:2.3vw ;
+    }
+    .title a{
+        text-decoration: none;
+        color: white;
+        background-color: #fa521c;
+        padding: 0.7vw;
+        border-radius: 0.5vw;
+        font-weight: 500;
+        font-size: 1.4vw;
+    }  
+}
+/* .......cards............................... */
+.cards{
+    display: flex;
+    width: 100;
+    background-color: #e1e1e1;
+    height: 25vw;
+    justify-content: space-around;
+    margin-bottom: 3vw;
+}
+.card{
+    width: 25%;
+    height: 20vw;
+    text-align: center;
+    background-color: white;
+    padding-top: 2vw;
+    padding: 1vw;
+    margin-top: -7vw;
+}
+.card h5{
+    font-size: 1.5vw;
+    padding-bottom: 0.5vw;   
+}
+.card .iconify{
+    font-size: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+/* ...............media queries............. */
+@media screen and (max-width: 450px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        width: 100;
+        background-color: #e1e1e1;
+        height: 140vw;
+        margin-bottom: 22vw;
+      
+    }
+    .card{
+        width: 45%;
+        height: 37vw;
+        text-align: center;
+        background-color: white;
+        padding-top: 2vw;
+        padding: 1vw;
+        margin-top: 1vw;
+        margin-left: 25vw;
+    }
+    .card h5{
+        font-size: 2.3vw;
+        padding-bottom: 0.5vw;   
+    }
+    .card .iconify{
+        font-size: 5vw;
+        margin-top: 2vw;
+        margin-bottom: 0.5vw;
+    }
+    .card p{
+        font-size: 1.9vw;
+    }
+}
+
