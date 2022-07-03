@@ -15,5 +15,10 @@ body{
 }
 .uploaded-project{
     background-color: white;
-    
+
+}
+.btn-orange{
+    background-color: #FB6F36;
+    color: #ffff;
+    border-radius: 40px;
 }

@@ -5,6 +5,7 @@ import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './main/navbar/navbar.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { UpdateProfileComponent } from './users/update-profile/update-profile.component';
 //import { LoginComponent } from './users/login/login.component';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
     AppComponent,
     routingComponents,
     NavbarComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
