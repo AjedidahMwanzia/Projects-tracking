@@ -9,6 +9,7 @@ django = "*"
 python-decouple = "*"
 cloudinary = "*"
 psycopg2 = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
