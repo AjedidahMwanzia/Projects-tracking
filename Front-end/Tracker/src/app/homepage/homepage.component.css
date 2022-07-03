@@ -1,3 +1,5 @@
+
+/* .....................navbar............................................ */
 .logo img{
     width: 12vw;
     margin-left: -10vw;
@@ -17,7 +19,7 @@
     margin-top: 1vw;
     font-size: 1.2vw;
 }
-/* .................................nav media ................................ */
+/* .................................navbar media ................................ */
 @media screen and (max-width: 450px) {
     .logo img{
         width: 15vw;
@@ -39,4 +41,43 @@
         margin-top: 1vw;
         font-size: 2.3vw;
     }
+}
+/* ......................background image section..................................................... */
+.container{
+    background-image: linear-gradient(
+        90deg,
+        rgba(17,31,60,0.4),
+
+        rgba(17,31,60,0.3)
+    ),
+    url("../../assets/back2.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:42vw ;
+    width: 100%;
+}
+.container{
+    color: white;
+    padding-top: 7vw;
+    padding-left: 7vw;
+  
+}
+.container h1{
+    padding-bottom: 3vw;
+    font-weight: 700;
+    line-height: 0.4vw;
+}
+.container p {
+    margin-bottom: 2vw;
+    font-size: 1.2vw;
+    line-height:2.3vw ;
+}
+.title a{
+    text-decoration: none;
+    color: white;
+    background-color: #fa521c;
+    padding: 0.7vw;
+    border-radius: 0.5vw;
+    font-weight: 500;
 }
