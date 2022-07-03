@@ -1,5 +1,5 @@
 
-/* .....................navbar............................................ */
+/* .....................navbar.................................... */
 .logo img{
     width: 12vw;
     margin-left: -10vw;
@@ -19,7 +19,7 @@
     margin-top: 1vw;
     font-size: 1.2vw;
 }
-/* ...............................media queries................................ */
+/* ...............................media queries........................ */
 @media screen and (max-width: 450px) {
     .logo img{
         width: 15vw;
@@ -42,7 +42,7 @@
         font-size: 2.3vw;
     }
 }
-/* ......................background image section..................................................... */
+/* ......................background image section................ */
 .container{
     background-image: linear-gradient(
         90deg,
@@ -123,4 +123,31 @@
         font-weight: 500;
         font-size: 1.4vw;
     }  
+}
+/* .......cards............................... */
+.cards{
+    display: flex;
+    width: 100;
+    background-color: #e1e1e1;
+    height: 22vw;
+    justify-content: space-around;
+    margin-bottom: 3vw;
+}
+.card{
+    width: 25%;
+    height: 20vw;
+    text-align: center;
+    background-color: white;
+    padding-top: 2vw;
+    padding: 1vw;
+    margin-top: -7vw;
+}
+.card h5{
+    font-size: 1.5vw;
+    padding-bottom: 0.5vw;   
+}
+.card .iconify{
+    font-size: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
