@@ -186,3 +186,30 @@
     }
 }
 
+/* .........Featured projects............ */
+.project{
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    margin-top: 2vw;
+}
+.project #card img{
+    width: 18vw;
+    height: 12vw;
+}
+#card{
+    width: 20%;
+    background-color: #111f3c;
+    color: white;
+    margin-left: 1vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    height: 25vw;
+}
+hr{
+    width: 5vw;
+   
+}
+.projects h3{
+    text-align: center;
+}
