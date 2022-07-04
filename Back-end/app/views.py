@@ -3,10 +3,13 @@ from django.contrib import messages
 from app.forms import UserRegistrationForm
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from app.permissions import IsAdminOrReadOnly
 from .models import  Profile
 from .serializers import ProfileSerializer, UserSerializer
 from django.contrib.auth.models import User
 from rest_framework import status
+
 # Create your views here.
 def home(request):
     return render(request,'index.html')
@@ -39,6 +42,7 @@ class ProfileList(APIView):
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class UserList(APIView):
+    permission_classes = (IsAdminOrReadOnly,)
     def get(self, request, format=None):
         all_user = User.objects.all()
         serializers = UserSerializer(all_user, many=True)

@@ -2,6 +2,7 @@ from os import pathsep
 from django.urls import path
 from . import  views
 from django.contrib.auth import views as auth_views
+from rest_framework.authtoken.views import obtain_auth_token
 
 
 urlpatterns = [
@@ -12,4 +13,6 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='auth/login.html'), name='logout'),
     path('api/profile/', views.ProfileList.as_view()),
     path('api/user/', views.UserList.as_view()),
+    path('api-token-auth/', obtain_auth_token),
+    
 ]
