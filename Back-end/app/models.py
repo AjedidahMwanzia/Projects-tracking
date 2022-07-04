@@ -70,3 +70,9 @@ class Cohort(models.Model):
     name = models.CharField(max_length=100)
     admission_date = models.DateTimeField(auto_now_add=True,blank=True)
     graduation_date = models.DateTimeField(auto_now_add=True,blank=True)
+
+    def __str__(self):
+        return str(self.name)
+
+    def save_cohort(self):
+        self.save()

@@ -6,8 +6,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from app.permissions import IsAdminOrReadOnly
-from .models import  Profile,Project
-from .serializers import ProfileSerializer, UserSerializer,ProjectSerializer
+from .models import  Profile,Project,Cohort
+from .serializers import ProfileSerializer, UserSerializer,ProjectSerializer, CohortSerializer
 from django.contrib.auth.models import User
 from rest_framework import status
 
@@ -63,3 +63,16 @@ class UserList(APIView):
             return Response(serializers.data, status=status.HTTP_201_CREATED)
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class CohortList(APIView):
+    def get(self, request, format=None):
+        all_cohorts = Cohort.objects.all()
+        serializers = CohortSerializer(all_cohorts, many=True)
+        permission_classes = (IsAdminOrReadOnly,)
+        return Response(serializers.data)
+    
+    def post(self,request,format=None):
+        serializers = CohortSerializer(data=request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
