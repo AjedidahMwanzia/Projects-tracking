@@ -42,7 +42,7 @@ class ProfileList(APIView):
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class UserList(APIView):
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
     def get(self, request, format=None):
         all_user = User.objects.all()
         serializers = UserSerializer(all_user, many=True)
