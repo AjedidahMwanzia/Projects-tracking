@@ -12,7 +12,7 @@ class UserRegistrationForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         
- class projectForm(forms.ModelForm):
+class projectForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = ['name','description','project_image','project_link']

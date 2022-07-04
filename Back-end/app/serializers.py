@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Profile,Project
+from .models import Profile,Project, Cohort
 from django.contrib.auth.models import User
 
 
@@ -14,9 +14,13 @@ class UserSerializer(serializers.ModelSerializer):
         model=User
         fields=('__all__')
         
- class ProjectSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Project
         fields = ('name', 'description', 'project_image','project_link','user') 
 
-
+class CohortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cohort 
+        fields = ('name', 'admission_date', 'graduation_date')
