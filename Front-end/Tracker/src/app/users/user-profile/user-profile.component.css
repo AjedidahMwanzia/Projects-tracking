@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    background-color: #D9D9D9;
+    padding-top: 4vh;
+}
+.userdetails{
+    background-color: white;
+}
+.h-font-semibold{
+    color: #111F3C;
+    font-family: 'Montserrat', sans-serif;
+}
+.p-description{
+    color: #111F3C;
+}
+.uploaded-project{
+    background-color: white;
+
+}
+.btn-orange{
+    background-color: #FB6F36;
+    color: #ffff;
+    border-radius: 40px;
+}
