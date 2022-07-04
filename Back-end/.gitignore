@@ -1,5 +1,7 @@
+
+.env
 Pipfile
 Pipfile.lock
-.env
 __pycache__/
 *.pyc
+

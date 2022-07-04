@@ -15,6 +15,16 @@ class Project(models.Model):
     project_link = models.URLField(max_length=20000)
     date_posted = models.DateTimeField(default=timezone.now)
 
+    def save_projects(self):
+        self.user
+
+    def delete_projects(self):
+        self.delete()    
+
+    @classmethod
+    def search_projects(cls, name):
+        return cls.objects.filter(title__icontains=name).all()
+
 
 
 class Profile(models.Model):

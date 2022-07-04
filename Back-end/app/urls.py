@@ -1,4 +1,4 @@
-from os import pathsep
+
 from django.urls import path
 from . import  views
 from django.contrib.auth import views as auth_views
@@ -14,5 +14,7 @@ urlpatterns = [
     path('api/profile/', views.ProfileList.as_view()),
     path('api/user/', views.UserList.as_view()),
     path('api-token-auth/', obtain_auth_token),
+    path('api/projects',views.ProjectList.as_view(), name='apiprojects')
     
+
 ]

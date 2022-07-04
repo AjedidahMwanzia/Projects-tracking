@@ -1,3 +1,4 @@
+
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from app.forms import UserRegistrationForm
@@ -5,14 +6,22 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from app.permissions import IsAdminOrReadOnly
-from .models import  Profile
-from .serializers import ProfileSerializer, UserSerializer
+from .models import  Profile,Project
+from .serializers import ProfileSerializer, UserSerializer,ProjectSerializer
 from django.contrib.auth.models import User
 from rest_framework import status
+
 
 # Create your views here.
 def home(request):
     return render(request,'index.html')
+
+
+class ProjectList(APIView):
+    def get(self,request,format = None):
+        all_projects = Project.objects.all()
+        serializerdata = ProjectSerializer(all_projects,many = True)
+        return Response(serializerdata.data)
 
 def register_user(request):
     if request.method == 'POST':
@@ -53,3 +62,4 @@ class UserList(APIView):
             serializers.save()
             return Response(serializers.data, status=status.HTTP_201_CREATED)
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+
