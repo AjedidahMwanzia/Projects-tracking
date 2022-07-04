@@ -23,13 +23,38 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
     image = CloudinaryImage('image')
-    email = models.EmailField()
     phone_number = models.TextField(max_length=12)
     facebookLinks = models.CharField(max_length=1000, null=True)
     TwitterLinks = models.CharField(max_length=10000, null=True)
     GithubLinks = models.CharField(max_length=1000, null=True)
     InstagramLinks = models.CharField(max_length=1000, null=True)
-    projects = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='profile')
+     
+
+    def __str__(self):
+        return f'{self.user.username} profile'
+
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
+
+
+    def delete_profile(self):
+        self.delete()
+    
+    @classmethod
+    def filter_profile_by_id(cls, id):
+        profile = Profile.objects.filter(user__id = id).first()
+        return profile
+
+    @classmethod
+    def search_profile(cls, name):
+        return cls.objects.filter(user__username__icontains=name).all()
+
 
 class Cohort(models.Model):
     name = models.CharField(max_length=100)
