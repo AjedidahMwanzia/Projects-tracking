@@ -4,13 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = "*"
-django = "*"
-python-decouple = "*"
-cloudinary = "*"
-psycopg2 = "*"
-django-cors-headers = "*"
-djangorestframework = "*"
 
 [dev-packages]
 

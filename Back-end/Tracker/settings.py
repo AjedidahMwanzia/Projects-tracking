@@ -43,12 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'cloudinary',
-<<<<<<< HEAD
     'corsheaders',
-=======
     'rest_framework',
     'rest_framework.authtoken',
->>>>>>> main
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

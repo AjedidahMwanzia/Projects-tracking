@@ -14,12 +14,13 @@ import { HomepageComponent } from './homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
-
+    HomepageComponent,
     routingComponents,
+    LoginComponent,
     NavbarComponent,
     UserProfileComponent,
-    UpdateProfileComponent
-    HomepageComponent
+    UpdateProfileComponent,
+  
 
   ],
   imports: [
