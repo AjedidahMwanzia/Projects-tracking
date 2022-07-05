@@ -9,6 +9,7 @@ import { UpdateProfileComponent } from './users/update-profile/update-profile.co
 import { LoginComponent } from './users/login/login.component';
 
 import { HomepageComponent } from './homepage/homepage.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -18,8 +19,9 @@ import { HomepageComponent } from './homepage/homepage.component';
     routingComponents,
     NavbarComponent,
     UserProfileComponent,
-    UpdateProfileComponent
-    HomepageComponent
+    UpdateProfileComponent ,
+    HomepageComponent,
+    RegisterComponent
 
   ],
   imports: [
