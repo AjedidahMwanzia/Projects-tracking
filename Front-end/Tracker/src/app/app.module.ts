@@ -7,8 +7,9 @@ import { NavbarComponent } from './main/navbar/navbar.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import { UpdateProfileComponent } from './users/update-profile/update-profile.component';
 import { LoginComponent } from './users/login/login.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ProjectComponent } from './project/project.component';
 
 
 @NgModule({
@@ -20,11 +21,13 @@ import { HomepageComponent } from './homepage/homepage.component';
     NavbarComponent,
     UserProfileComponent,
     UpdateProfileComponent,
+    ProjectComponent,
   
 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
