@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceService} from 'src/app/service.service'
-import {projects} from '../models/project'
+import {project} from '../models/project'
 
 @Component({
   selector: 'app-project',
@@ -8,17 +8,21 @@ import {projects} from '../models/project'
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-  projects!:projects[]
+  project!:project[]
+  image_url='https://res.cloudinary.com/jeddy/'
   constructor(private ServiceService:ServiceService) { }
 
   ngOnInit(): void {
-    this.Projects()
+    this.Project()
   }
 
-  Projects():void{
-    this.ServiceService.Projects().subscribe(projects=>{
-      this.projects=projects
-      // console.log(projects)
+  Project():void{
+    this.ServiceService.Project().subscribe(project=>{
+      this.project=project
+      for(let item of this.project){
+        console.log(this.image_url)
+      }
+      // console.log(project)
     })
   }
 }

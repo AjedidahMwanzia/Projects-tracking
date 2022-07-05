@@ -1,9 +1,9 @@
-export interface projects{
+export interface project{
     'id':number
     'user':string
     'name':string
     'description':string
     'project_image':any
-    'project_link':any
+    'url':any
     'date_posted':any
 }

@@ -17,11 +17,12 @@
          <h5>Recently Added Projects</h5><hr>
         </div>
         <div id="aboutus">
-            <ul *ngFor="let project of projects">
-                        
-                <li>{{project.project_image}}</li>
+            <ul *ngFor="let project of project">
+                <img src="{{image_url+project.project_image}}" />      
+                
                 <li>{{project.name}}</li>
                 <li>{{project.description}}</li>
+                <li>{{project.url}}</li>
             </ul>
         </div>
     </div>
