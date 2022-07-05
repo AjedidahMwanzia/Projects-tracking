@@ -44,6 +44,7 @@ def register_user(request):
 
 
 class ProfileList(APIView):
+    # permission_classes = (IsAdminOrReadOnly,)
     def get(self, request, format=None):
         all_profile = Profile.objects.all()
         serializers = ProfileSerializer(all_profile, many=True)

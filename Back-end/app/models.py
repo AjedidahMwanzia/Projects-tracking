@@ -16,13 +16,15 @@ class User(AbstractUser):
     # REQUIRED_FIELDS=[]
 
 class Project(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=500)
     project_image = CloudinaryField('image')
-    project_link = models.URLField(max_length=20000)
+    url = models.URLField(blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
 
+    def __str__(self):
+        return str(self.name)
     def save_projects(self):
         self.user
 
