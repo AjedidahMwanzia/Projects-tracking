@@ -1,6 +1,11 @@
 
 from django.shortcuts import redirect, render
 from django.contrib import messages
+from .models import *
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 from rest_framework.response import Response
 from rest_framework.views import APIView

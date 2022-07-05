@@ -6,6 +6,14 @@ from django.dispatch import receiver
 from django.utils  import timezone
 from cloudinary import CloudinaryImage
 
+# class User(AbstractUser):
+#     name = models.CharField(max_length=30)
+#     password = models.CharField(max_length=30)
+#     email = models.CharField(max_length=30,unique=True)
+#     username:None
+
+#     USERNAME_FIELD='email'
+#     REQUIRED_FIELDS=[]
 
 class Project(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -3,8 +3,10 @@ from django.urls import path
 from . import  views
 from django.contrib.auth import views as auth_views
 from rest_framework.authtoken.views import obtain_auth_token
-from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
-
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 urlpatterns = [
     
@@ -17,7 +19,7 @@ urlpatterns = [
     path('api-token-auth/', obtain_auth_token),
     path('api/projects',views.ProjectList.as_view()),
     path('api/cohort/', views.CohortList.as_view()),
-    path('auth/login/', obtain_jwt_token),
-    path('auth/refresh-token/', refresh_jwt_token),
+    path('auth/login/', TokenObtainPairView.as_view()),
+    path('auth/refresh-token/', TokenRefreshView.as_view()),
 
 ]

@@ -11,7 +11,7 @@ cloudinary = "*"
 psycopg2 = "*"
 django-cors-headers = "*"
 djangorestframework = "*"
-djangorestframework-jwt = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
