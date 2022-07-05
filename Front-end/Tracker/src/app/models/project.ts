@@ -1,4 +1,4 @@
-export interface project{
+export interface projects{
     'id':number
     'user':string
     'name':string
