@@ -147,9 +147,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 cloudinary.config( 
-  cloud_name =config('CLOUD_NAME'), 
-  api_key =config('API_KEY', cast=int), 
-  api_secret = config('API_SECRET'),
+  cloud_name = "jeddy", 
+  api_key = "136262568691725", 
+  api_secret = "D8mX4Rvxz6VyGLhZDIprEG26Q60" 
 )
 STATIC_URL = 'static/'
 
@@ -163,4 +163,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
     "http://127.0.0.1:8000",
 ]
-# AUTH_USER_MODEL='app.User'
+AUTH_USER_MODEL='app.User'

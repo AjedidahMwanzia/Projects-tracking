@@ -1,25 +1,25 @@
 from django.db import models
 from datetime import datetime
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils  import timezone
-from cloudinary import CloudinaryImage
+from cloudinary.models import CloudinaryField
 
-# class User(AbstractUser):
-#     name = models.CharField(max_length=30)
-#     password = models.CharField(max_length=30)
-#     email = models.CharField(max_length=30,unique=True)
-#     username:None
+class User(AbstractUser):
+    name = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
+    email = models.CharField(max_length=255,unique=True)
+    username= models.CharField(max_length=255,unique=True)
 
-#     USERNAME_FIELD='email'
-#     REQUIRED_FIELDS=[]
+    # USERNAME_FIELD='email'
+    # REQUIRED_FIELDS=[]
 
 class Project(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=500)
-    project_image = CloudinaryImage('image')
+    project_image = CloudinaryField('image')
     project_link = models.URLField(max_length=20000)
     date_posted = models.DateTimeField(default=timezone.now)
 
@@ -40,7 +40,7 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
-    image = CloudinaryImage('image')
+    image = CloudinaryField('image')
     phone_number = models.TextField(max_length=12)
     facebookLinks = models.CharField(max_length=1000, null=True)
     TwitterLinks = models.CharField(max_length=10000, null=True)
