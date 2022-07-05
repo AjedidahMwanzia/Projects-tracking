@@ -15,8 +15,25 @@ class User(AbstractUser):
     # USERNAME_FIELD='email'
     # REQUIRED_FIELDS=[]
 
+
+class User(AbstractUser):
+    name=models.CharField(max_length=30)
+    email=models.EmailField(max_length=300, unique=True)
+    password = models.CharField(max_length=300)
+
+    username = None
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+
+
+
+
 class Project(models.Model):
+<<<<<<< HEAD
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+=======
+>>>>>>> 264db1a1837a9ac8c06867ea24bf145919b3e4a2
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=500)
     project_image = CloudinaryField('image')
@@ -38,7 +55,6 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
