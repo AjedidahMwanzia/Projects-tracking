@@ -2,13 +2,6 @@ from wsgiref import validate
 from rest_framework import serializers
 from .models import Profile,Project, Cohort, User
 
-
-
-class ProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model=Profile
-        fields=('__all__')
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
@@ -16,6 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True}
         }
+
 
 
     def create(self, validated_data):
@@ -27,6 +21,17 @@ class UserSerializer(serializers.ModelSerializer):
 
         instance.save()
         return instance
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Profile
+        fields=('__all__')
+
+        read_only_fields = ("user",)
+        depth = 1
+
+
+
         
 class ProjectSerializer(serializers.ModelSerializer):
 

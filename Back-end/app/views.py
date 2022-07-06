@@ -1,12 +1,13 @@
 
 from django.shortcuts import redirect, render
 from django.contrib import messages
+
+from app.forms import UserRegistrationForm
 from .models import *
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-
-
+from .forms import UserRegistrationForm, UserCreationForm
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import AuthenticationFailed
