@@ -6,15 +6,6 @@ from django.dispatch import receiver
 from django.utils  import timezone
 from cloudinary.models import CloudinaryField
 
-class User(AbstractUser):
-    name = models.CharField(max_length=255)
-    password = models.CharField(max_length=255)
-    email = models.CharField(max_length=255,unique=True)
-    username= models.CharField(max_length=255,unique=True)
-
-    # USERNAME_FIELD='email'
-    # REQUIRED_FIELDS=[]
-
 
 
 
@@ -45,6 +36,7 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
