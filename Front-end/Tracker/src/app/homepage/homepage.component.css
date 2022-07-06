@@ -17,7 +17,7 @@
 }
 .block{
     margin-top: 1vw;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 /* ...............................media queries........................ */
 @media screen and (max-width: 450px) {
@@ -45,7 +45,7 @@
 /* ......................background image section................ */
 .container{
     
-    padding-top: 7vw;
+    padding-top: 9vw;
     margin-top: 0.8vw;
     width: 100%;
 }
@@ -64,8 +64,9 @@ body{
     color: white;
 }
 .container h1{
-    padding-bottom: 3vw;
+    padding-bottom: 2.3vw;
     font-weight: 700;
+    font-size: 2.3vw;
     line-height: 0.4vw;
 }
 .container p {
@@ -106,13 +107,13 @@ body{
     .container h1{
         padding-bottom: 3vw;
         font-weight: 700;
-        line-height: 0.4vw;
+        /* line-height: 0.4vw; */
         font-size:3vw ;
     }
     .container p {
         margin-bottom: 2vw;
         font-size: 2.5vw;
-        line-height:2.3vw ;
+        /* line-height:2.3vw ; */
     }
     .title a{
         text-decoration: none;
@@ -134,6 +135,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: #fafafa;
+    color: #0f1f48;
 
 }
 @media screen and (max-width: 500px) {
@@ -292,6 +294,25 @@ body{
     width: 100%;
     height: 40vw;
 }
+.projects h6{
+    color: #0f1f48;
+    margin-left: 18vw;
+    margin-top: 3vw;
+    font-weight: 600;
+    font-size: 2vw;
+}
+hr{
+    height: 0.2vw;
+    width: 10vw;
+    color: #0e173d;
+    background-color: #0e173d;
+    margin-top: -1vw;
+    margin-right: 52vw;
+    
+}
+
+
+/* ............................... */
 .numbers{
     display: flex;
     justify-content: space-around;
@@ -302,7 +323,11 @@ body{
 }
 .number1{
     margin-top: 6vw;
+    
+}
+.number1 p{
     font-size: 2vw;
+    
 }
 .number1 h6{
     font-size: 3vw;
@@ -310,7 +335,7 @@ body{
 }
 #num{
     color: #fa521c;
-    font-weight: 500;
+    font-weight: 400;
 }
 #num1{
     color: #0e173d;
@@ -319,21 +344,27 @@ body{
 @media screen and (max-width: 500px) {
     .projects{
         width: 100%;
-        height: 40vw;
+        height: 120vw;
+        margin-bottom: 3vw;
     }
     .numbers{
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         width: 100%;
-        height: 20vw;
+        height: 30vw;
         background-color: #e1e1e1;
         margin-bottom: 2vw;
     }
     .number1{
-        margin-top: 6vw;
-        font-size: 2vw;
+        margin-top: 8vw;
+        font-size: 3vw;
     }
     .number1 h6{
+        font-size: 4vw;
+        text-align: center;
+    }
+    .number1 p{
         font-size: 3vw;
         text-align: center;
     }
@@ -351,8 +382,8 @@ body{
     display: flex;
     padding-left: 5vw;
     margin-top: 3vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
     margin-bottom: 3vw;
 }
 .slide img{
@@ -402,6 +433,9 @@ body{
     .text h6{
         color: #fa521c;
     }
+    .text h5{
+        font-size: 3.5vw;
+    }
 }
 /* ....................... */
 .footer{
@@ -435,4 +469,48 @@ iframe{
 .logo{
    margin-left: 2vw;
    padding-left: 2vw;
+}
+.media .iconify{
+    font-size: 1.3vw;
+}
+span{
+
+}
+@media screen and (max-width: 500px) {
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 3vw;
+        padding-top: 7vw;
+        background-color: #0e173d;
+        color: white;
+        font-size: 1.1vw;
+        margin-top: 2vw;
+        padding-bottom: 5vw;
+    }
+    
+    .media a{
+        text-decoration: none;
+        color: white;
+        padding: 1vw;
+        
+    }
+    .map{
+        width: 20%;
+    }
+    iframe{
+        width: 100%;
+        height: 20vw;
+        margin-left: 3vw;
+    }
+    .footer .iconify{
+        font-size: 1vw;
+    }
+    .logo{
+       margin-left: 2vw;
+       padding-left: 2vw;
+    }
+    .media .iconify{
+        font-size: 1.3vw;
+    }
 }
