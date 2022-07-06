@@ -32,7 +32,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('name', 'description', 'project_image','project_link','user') 
+        fields = ('name', 'description', 'project_image','url','user') 
 
 class CohortSerializer(serializers.ModelSerializer):
     class Meta:

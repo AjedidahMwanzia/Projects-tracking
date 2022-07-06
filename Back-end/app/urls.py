@@ -17,8 +17,9 @@ urlpatterns = [
     path('api/profile/', views.ProfileList.as_view()),
     path('api/user/', views.UserList.as_view()),
     path('api-token-auth/', obtain_auth_token),
-    path('api/projects',views.ProjectList.as_view(), name='apiprojects'),
+    path('api/projects',views.ProjectList.as_view()),
     path('api/cohort/', views.CohortList.as_view()),
-    
+    # path('auth/login/', obtain_auth_token),
+    # path('auth/refresh-token/', refresh_auth_token),
 
 ]

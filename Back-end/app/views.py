@@ -1,7 +1,12 @@
 
 from django.shortcuts import redirect, render
 from django.contrib import messages
-from app.forms import UserRegistrationForm
+from .models import *
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import AuthenticationFailed
@@ -109,6 +114,7 @@ class RegisterView(APIView):
         return Response(serializer.data)
 
 class ProfileList(APIView):
+    # permission_classes = (IsAdminOrReadOnly,)
     def get(self, request, format=None):
         all_profile = Profile.objects.all()
         serializers = ProfileSerializer(all_profile, many=True)
