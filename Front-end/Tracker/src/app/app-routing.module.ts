@@ -16,4 +16,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 // array of all routing components
-export const routingComponents = [LoginComponent]
+export const routingComponents = [LoginComponent,UserProfileComponent]
