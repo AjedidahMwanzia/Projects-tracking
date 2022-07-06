@@ -12,21 +12,6 @@ class User(AbstractUser):
     email = models.CharField(max_length=255,unique=True)
     username= models.CharField(max_length=255,unique=True)
 
-    # USERNAME_FIELD='email'
-    # REQUIRED_FIELDS=[]
-
-
-class User(AbstractUser):
-    name=models.CharField(max_length=30)
-    email=models.EmailField(max_length=300, unique=True)
-    password = models.CharField(max_length=300)
-
-    username = None
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
-
-
-
 
 
 class Project(models.Model):
@@ -39,6 +24,7 @@ class Project(models.Model):
 
     def __str__(self):
         return str(self.name)
+
     def save_projects(self):
         self.user
 
@@ -52,6 +38,7 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
@@ -71,9 +58,9 @@ class Profile(models.Model):
         if created:
             Profile.objects.create(user=instance)
 
-    @receiver(post_save, sender=User)
-    def save_user_profile(sender, instance, **kwargs):
-        instance.profile.save()
+    # @receiver(post_save, sender=User)
+    # def save_user_profile(sender, instance, **kwargs):
+    #     instance.profile.save()
 
 
     def delete_profile(self):

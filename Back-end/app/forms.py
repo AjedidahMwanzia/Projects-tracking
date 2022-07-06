@@ -15,5 +15,5 @@ class UserRegistrationForm(UserCreationForm):
 class projectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name','description','project_link']
+        fields = ['name','description','url']
 
