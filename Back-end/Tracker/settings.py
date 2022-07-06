@@ -47,11 +47,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-<<<<<<< HEAD
     
-=======
-    'corsheaders',
->>>>>>> 264db1a1837a9ac8c06867ea24bf145919b3e4a2
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -68,11 +64,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-<<<<<<< HEAD
-    "corsheaders.middleware.CorsMiddleware",
-=======
     'corsheaders.middleware.CorsMiddleware',
->>>>>>> 264db1a1837a9ac8c06867ea24bf145919b3e4a2
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -159,16 +151,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD
 CORS_ALLOWED_ORIGINS = [
    
     "http://localhost:4200",
     "http://127.0.0.1:8000",
 ]
 AUTH_USER_MODEL='app.User'
-=======
-AUTH_USER_MODEL = 'app.User'
+
 
 CORS_ORIGIN_ALLOW_ALL = True 
 CORS_ALLOW_CREDENTIALS = True
->>>>>>> 264db1a1837a9ac8c06867ea24bf145919b3e4a2

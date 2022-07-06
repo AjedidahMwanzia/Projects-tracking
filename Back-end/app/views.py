@@ -1,6 +1,8 @@
 
 from django.shortcuts import redirect, render
 from django.contrib import messages
+
+from app.forms import UserRegistrationForm
 from .models import *
 import cloudinary
 import cloudinary.uploader
