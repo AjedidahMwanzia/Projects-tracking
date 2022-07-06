@@ -6,4 +6,3 @@ admin.site.register(Cohort)
 admin.site.register(Project)
 admin.site.register(Profile)
 admin.site.register(User)
-

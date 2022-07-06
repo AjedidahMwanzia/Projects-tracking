@@ -13,6 +13,7 @@ django-cors-headers = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 pyjwt = "*"
+djangorestframework-jwt = "*"
 
 [dev-packages]
 
