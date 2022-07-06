@@ -1,3 +1,4 @@
+
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import AbstractUser
@@ -7,13 +8,24 @@ from django.utils  import timezone
 from cloudinary.models import CloudinaryField
 
 
+class Cohort(models.Model):
+    name = models.CharField(max_length=100)
+    admission_date = models.DateTimeField(auto_now_add=True,blank=True)
+    graduation_date = models.DateTimeField(auto_now_add=True,blank=True)
+
+    def __str__(self):
+        return str(self.name)
+
+    def save_cohort(self):
+        self.save()
 
 class User(AbstractUser):
     name = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
     email = models.CharField(max_length=255,unique=True)
     username= models.CharField(max_length=255,unique=True)
-
+    cohort=models.OneToOneField(Cohort,on_delete=models.SET_NULL,null=True)
+    # project=models.ForeignKey(Project,on_delete=CASCADE)
     # USERNAME_FIELD='email'
     # REQUIRED_FIELDS=[]
 
@@ -21,7 +33,7 @@ class User(AbstractUser):
 
 
 class Project(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user=models.OneToOneField(User, on_delete=models.CASCADE,primary_key=True)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=500)
     project_image = CloudinaryField('image')
@@ -43,7 +55,7 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user=models.OneToOneField(User, on_delete=models.CASCADE,primary_key=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
@@ -81,13 +93,3 @@ class Profile(models.Model):
         return cls.objects.filter(user__username__icontains=name).all()
 
 
-class Cohort(models.Model):
-    name = models.CharField(max_length=100)
-    admission_date = models.DateTimeField(auto_now_add=True,blank=True)
-    graduation_date = models.DateTimeField(auto_now_add=True,blank=True)
-
-    def __str__(self):
-        return str(self.name)
-
-    def save_cohort(self):
-        self.save()
