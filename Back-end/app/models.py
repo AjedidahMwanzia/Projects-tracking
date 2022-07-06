@@ -30,10 +30,6 @@ class User(AbstractUser):
 
 
 class Project(models.Model):
-<<<<<<< HEAD
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-=======
->>>>>>> 264db1a1837a9ac8c06867ea24bf145919b3e4a2
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=500)
     project_image = CloudinaryField('image')
