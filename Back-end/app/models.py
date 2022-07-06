@@ -16,15 +16,6 @@ class User(AbstractUser):
     # REQUIRED_FIELDS=[]
 
 
-class User(AbstractUser):
-    name=models.CharField(max_length=30)
-    email=models.EmailField(max_length=300, unique=True)
-    password = models.CharField(max_length=300)
-
-    username = None
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
-
 
 
 
@@ -52,6 +43,7 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE,null=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     bio = models.TextField(max_length=300)
