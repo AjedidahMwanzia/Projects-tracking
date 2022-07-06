@@ -9,6 +9,15 @@ django = "*"
 python-decouple = "*"
 cloudinary = "*"
 psycopg2 = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+pyjwt = "*"
+<<<<<<< HEAD
+djangorestframework-jwt = "*"
+=======
+gunicorn = "*"
+>>>>>>> 969b96592f0ba34927811e2c8e251c215faae253
 
 [dev-packages]
 
