@@ -56,7 +56,7 @@ body{
 
         rgba(17,31,60,0.3)
     ),
-    url("../../assets/back2.jpg");
+    url("../../assets/images/back2.jpg");
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,7 +90,7 @@ body{
     
             rgba(17,31,60,0.3)
         ),
-        url("../../assets/back2.jpg");
+        url("../../assets/images/back2.jpg");
     
         background-repeat: no-repeat;
         background-size: cover;
@@ -284,3 +284,113 @@ body{
 
 
 /* .........Featured projects............ */
+.projects{
+    width: 100%;
+    height: 40vw;
+}
+.numbers{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 20vw;
+    background-color: #e1e1e1;
+    margin-bottom: 2vw;
+}
+.number1{
+    margin-top: 6vw;
+    font-size: 2vw;
+}
+.number1 h6{
+    font-size: 3vw;
+    text-align: center;
+}
+#num{
+    color: #fa521c;
+    font-weight: 500;
+}
+#num1{
+    color: #0e173d;
+    font-weight: 500;
+}
+@media screen and (max-width: 500px) {
+    .projects{
+        width: 100%;
+        height: 40vw;
+    }
+    .numbers{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 20vw;
+        background-color: #e1e1e1;
+        margin-bottom: 2vw;
+    }
+    .number1{
+        margin-top: 6vw;
+        font-size: 2vw;
+    }
+    .number1 h6{
+        font-size: 3vw;
+        text-align: center;
+    }
+    #num{
+        color: #fa521c;
+        font-weight: 500;
+    }
+    #num1{
+        color: #0e173d;
+        font-weight: 500;
+    }
+}
+/* ........................... */
+.slide{
+    display: flex;
+    padding-left: 5vw;
+    padding-top: 2vw;
+}
+.slide img{
+    width: 20vw;
+    border-radius: 50%;
+    height: 19vw;
+}
+.text{
+    width: 50%;
+    background-color: #fafafa;
+    border-radius: 2vw;
+    padding: 2vw;
+    margin-left: 5vw;
+    color: #0e173d;
+    margin-right: 2vw;
+    font-size: 1.2vw;
+}
+.text h6{
+    color: #fa521c;
+}
+@media screen and (max-width: 500px) {
+    .slide{
+        display: flex;
+        flex-direction: column;
+        /* padding-left: 15vw; */
+        padding-top: 2vw;
+        
+    }
+    .slide img{
+        width: 20vw;
+        border-radius: 50%;
+        height: 19vw;
+       
+    }
+    .text{
+        width: 90%;
+        background-color: #fafafa;
+        border-radius: 2vw;
+        padding: 2vw;
+        margin-left: 5vw;
+        color: #0e173d;
+        margin-right: 2vw;
+        font-size: 2vw;
+    }
+    .text h6{
+        color: #fa521c;
+    }
+}
